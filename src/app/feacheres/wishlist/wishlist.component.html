@@ -1,0 +1,73 @@
+<div class="container mx-auto p-8 min-h-screen bg-gray-50/30">
+  
+  <nav class="text-sm text-gray-400 mb-6">
+    Home / <span class="text-gray-900 font-medium">Wishlist</span>
+  </nav>
+
+  <div class="flex items-center gap-4 mb-10">
+    <div class="bg-red-50 p-4 rounded-2xl shadow-sm border border-red-100">
+      <i class="fa-solid fa-heart text-red-500 text-2xl"></i>
+    </div>
+    <div>
+      <h1 class="text-2xl font-bold text-gray-900">My Wishlist</h1>
+      <p class="text-gray-400 text-sm font-medium">{{ wishlistData.length }} items saved</p>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-[2rem] shadow-sm border border-gray-100 overflow-hidden">
+    
+    <div class="hidden md:grid grid-cols-5 bg-gray-50/80 px-10 py-5 text-gray-400 text-xs font-bold uppercase tracking-widest border-b">
+      <p class="col-span-2">Product</p>
+      <p class="text-center">Price</p>
+      <p class="text-center">Status</p>
+      <p class="text-right">Actions</p>
+    </div>
+
+    <div class="divide-y divide-gray-50">
+     <div class="divide-y divide-gray-50">
+ @for (item of wishlistData; track item._id) {
+  <div class="grid grid-cols-1 md:grid-cols-5 items-center px-6 md:px-10 py-7">
+    
+    <div class="col-span-2 flex items-center gap-5">
+      <div class="w-24 h-24 flex-shrink-0 bg-white rounded-2xl border p-2 shadow-sm">
+        <img [src]="item.imageCover || item.product?.imageCover" 
+             class="w-full h-full object-contain" />
+      </div>
+      <div>
+        <h3 class="font-bold text-gray-800 text-lg"> 
+          {{ (item.title || item.product?.title || '').split(' ').slice(0, 2).join(' ') }} 
+        </h3>
+        <p class="text-xs text-gray-400">
+           {{ item.category?.name || item.product?.category?.name }}
+        </p>
+      </div>
+    </div>
+
+    <div class="text-center font-bold text-gray-900 text-lg">
+      {{ item.price || item.product?.price }} EGP
+    </div>
+
+    <div class="flex justify-center">
+      <span class="bg-green-50 text-green-600 text-[10px] font-extrabold px-4 py-1.5 rounded-full border border-green-100 uppercase">
+        In Stock
+      </span>
+    </div>
+
+    <div class="flex justify-end items-center gap-3">
+      <button (click)="addToCart(item.id || item._id || item.product?._id)" 
+              class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-xl text-sm font-bold shadow-md transition-all">
+        Add to Cart
+      </button>
+      
+      <button (click)="removeItem(item.id || item._id || item.product?._id)" 
+              class="group bg-white p-3 rounded-xl text-gray-300 hover:text-red-500 hover:bg-red-50 border border-gray-100 transition-all">
+        <i class="fa-solid fa-trash-can"></i>
+      </button>
+    </div>
+
+  </div>
+}
+</div>
+    </div>
+  </div>
+</div>
