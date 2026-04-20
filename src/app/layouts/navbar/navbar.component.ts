@@ -1,4 +1,4 @@
-import { Component, computed, inject, PLATFORM_ID } from '@angular/core';
+import { Component, computed, inject, PLATFORM_ID, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from "@angular/router";
 import { FlowbiteService } from '../../core/services/flowbite.service';
 import { initFlowbite } from 'flowbite';
@@ -6,6 +6,7 @@ import { AuthService } from '../../core/auth/services/auth.service';
 import { platformBrowser } from '@angular/platform-browser';
 import { CartService } from '../../core/auth/services/cart.service';
 import { isPlatformBrowser } from '@angular/common';
+import { ProductsService } from '../../core/services/products.service';
 
 @Component({
   selector: 'app-navbar',
@@ -17,6 +18,14 @@ export class NavbarComponent {
   private readonly authService = inject(AuthService);
   private readonly pLATFORM_ID = inject(PLATFORM_ID);
   private readonly cartService = inject(CartService);
+  private readonly productsService = inject(ProductsService);
+  
+ 
+
+  onSearch(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    this.productsService.searchTerm.set(input.value);
+  }
 
   logged = computed(()=>this.authService.isLogged()) ;
 

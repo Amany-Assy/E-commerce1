@@ -3,6 +3,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { CategoriesComponent } from '../categories/categories.component';
 import { ProductComponent } from './components/product/product.component';
 import { CategoryHomeComponent } from './components/category-home/category-home.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',

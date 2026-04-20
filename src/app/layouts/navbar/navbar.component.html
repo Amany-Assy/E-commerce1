@@ -14,6 +14,7 @@
     <div class="hidden lg:block grow max-w-md">
       <div class="group relative">
         <input
+        (input)="onSearch($event)"
           type="text"
           placeholder="Search for products..."
           class="w-full rounded-full border border-gray-200 bg-gray-50 px-6 py-2 pr-12 outline-none transition-all focus:border-emerald-500 focus:ring-emerald-500"
@@ -150,6 +151,7 @@
   <!-- search  -->
   <div class="relative mb-8">
     <input
+    (input)="onSearch($event)"
       type="text"
       placeholder="Search products..."
       class="w-full rounded-lg border border-gray-200 bg-gray-50 px-4 py-2.5 text-sm outline-none focus:border-emerald-500 focus:ring-emerald-500"

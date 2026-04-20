@@ -1,16 +1,20 @@
 <section class="p-10">
-<div class="container">
-<h2 class="text-3xl font-semibold">Featured <span class="text-primary">products</span></h2>
+  <div class="container">
+    <h2 class="text-3xl font-semibold">Featured <span class="text-primary">products</span></h2>
 
-<div class="mt-5 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 ">
+    <div class="mt-5 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+      
+      @for (product of productList() | search: searchTerm(); track product._id) {
+        
+        <app-card [product]="product"></app-card>
 
-@for (product of productList(); track product._id) {
-    
-    <app-card [product]="product"></app-card>
-}
-   
+      } @empty {
+        <div class="col-span-full text-center py-10">
+          <img src="assets/images/not-found.png" class="w-1/4 mx-auto opacity-50" alt="Not Found">
+          <p class="text-gray-500 text-xl mt-4">No products found matching "{{ searchTerm() }}"</p>
+        </div>
+      }
 
-
-</div>
-</div>
+    </div>
+  </div>
 </section>

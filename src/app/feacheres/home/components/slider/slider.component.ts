@@ -1,10 +1,15 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, computed, CUSTOM_ELEMENTS_SCHEMA, inject, signal } from '@angular/core';
+import { RouterLink } from "@angular/router";
+import { ProductsService } from '../../../../core/services/products.service';
 
 @Component({
   selector: 'app-slider',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class SliderComponent {}
+export class SliderComponent {
+
+ 
+}
