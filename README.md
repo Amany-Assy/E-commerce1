@@ -1,59 +1,98 @@
-# ECommerce
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.6.
+🛒 Fresh Cart — E-commerce Web Application
 
-## Development server
+A responsive e-commerce web application built with Angular and TypeScript, allowing users to browse products and categories, search for products, add items to the shopping cart, and manage their wishlist.
 
-To start a local development server, run:
+✨ Features
+🛍️ Browse products and product categories
+🔎 Search and filter products
+🛒 Add products to the shopping cart
+❤️ Add and remove products from the wishlist
+🔐 Authentication-aware user interactions
+🔔 Toast notifications for user actions
+📱 Responsive design for different screen sizes
+🔗 Dynamic navigation using Angular Router
+🌐 Integration with REST APIs
+🧩 Reusable Angular components
+🛠️ Technologies
+Angular
+TypeScript
+JavaScript
+HTML5
+CSS3
+Tailwind CSS
+Angular Router
+RxJS
+Angular Signals
+REST APIs
+Git & GitHub
+ngx-toastr
+🏗️ Project Structure
 
-```bash
+The application follows a modular Angular structure with reusable components and services.
+
+src/
+├── app/
+│   ├── core/
+│   │   ├── models/
+│   │   └── services/
+│   ├── shared/
+│   │   ├── pipes/
+│   │   └── ui/
+│   └── features/
+│       ├── home/
+│       ├── categories/
+│       └── ...
+├── assets/
+└── environments/
+
+🚀 Getting Started
+Prerequisites
+
+Make sure you have the following installed:
+
+Node.js
+npm
+Angular CLI
+Installation
+
+Clone the repository:
+
+git clone https://github.com/Amany-Assy/E-commerce1.git
+
+
+Navigate to the project directory:
+
+cd E-commerce1
+
+
+Install the dependencies:
+
+npm install
+
+
+Run the development server:
+
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+Open your browser and navigate to:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+http://localhost:4200/
 
-```bash
-ng generate component component-name
-```
+🔌 API Integration
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The application consumes REST APIs to retrieve product and category data and to handle shopping cart and wishlist operations.
 
-```bash
-ng generate --help
-```
+📱 Responsive Design
 
-## Building
+The user interface is designed to provide a responsive experience across different screen sizes using Tailwind CSS and responsive layout utilities.
 
-To build the project run:
+👩‍💻 Author
 
-```bash
-ng build
-```
+Amany Assy
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+GitHub: https://github.com/Amany-Assy
 
-## Running unit tests
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This project was developed as a practical Angular e-commerce application to strengthen front-end development skills and experience with API integration, reusable components, state management, routing, and responsive UI development.
