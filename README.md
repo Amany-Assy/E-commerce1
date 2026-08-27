@@ -1,7 +1,6 @@
-
 🛒 Fresh Cart — E-commerce Web Application
 
-A responsive e-commerce web application built with Angular and TypeScript, allowing users to browse products and categories, search for products, add items to the shopping cart, and manage their wishlist.
+A responsive e-commerce web application built with Angular and TypeScript. The application allows users to browse products and categories, search for products, add items to the shopping cart, and manage their wishlist.
 
 ✨ Features
 🛍️ Browse products and product categories
@@ -12,7 +11,7 @@ A responsive e-commerce web application built with Angular and TypeScript, allow
 🔔 Toast notifications for user actions
 📱 Responsive design for different screen sizes
 🔗 Dynamic navigation using Angular Router
-🌐 Integration with REST APIs
+🌐 REST API integration
 🧩 Reusable Angular components
 🛠️ Technologies
 Angular
@@ -27,25 +26,6 @@ Angular Signals
 REST APIs
 Git & GitHub
 ngx-toastr
-🏗️ Project Structure
-
-The application follows a modular Angular structure with reusable components and services.
-
-src/
-├── app/
-│   ├── core/
-│   │   ├── models/
-│   │   └── services/
-│   ├── shared/
-│   │   ├── pipes/
-│   │   └── ui/
-│   └── features/
-│       ├── home/
-│       ├── categories/
-│       └── ...
-├── assets/
-└── environments/
-
 🚀 Getting Started
 Prerequisites
 
@@ -76,13 +56,13 @@ Run the development server:
 ng serve
 
 
-Open your browser and navigate to:
+Then open your browser and navigate to:
 
 http://localhost:4200/
 
 🔌 API Integration
 
-The application consumes REST APIs to retrieve product and category data and to handle shopping cart and wishlist operations.
+The application integrates with REST APIs to retrieve product and category data and to handle shopping cart and wishlist operations.
 
 📱 Responsive Design
 
@@ -94,5 +74,13 @@ Amany Assy
 
 GitHub: https://github.com/Amany-Assy
 
+📌 Project Purpose
 
-This project was developed as a practical Angular e-commerce application to strengthen front-end development skills and experience with API integration, reusable components, state management, routing, and responsive UI development.
+This project was developed as a practical Angular e-commerce application to strengthen front-end development skills and gain hands-on experience with:
+
+API integration
+Reusable components
+State management with Angular Signals
+Routing
+Responsive UI development
+Shopping cart and wishlist functionality
